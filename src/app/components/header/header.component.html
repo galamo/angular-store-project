@@ -1,0 +1,12 @@
+<div>
+    <h1 (click)="changeHeader('Application Store New Title')">{{ title }}</h1>
+    <h2>
+        Products
+    </h2>
+    <h3 *ngFor="let product of products; index as pIndex"> {{ pIndex }} > {{ product }} </h3>
+    <!-- <h3>milk  </h3>
+    <h3> coke </h3>
+    <h3> water </h3>
+    <h3>  .</h3>
+    <h3>  .</h3> -->
+</div>
