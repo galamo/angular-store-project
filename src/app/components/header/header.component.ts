@@ -24,6 +24,8 @@ export class HeaderComponent {
     { label: "purple&indigo", value: "purple" },
     { label: "default", value: "blue" }]
     public colorInputValue: string = "red"
+    public newProduct: string = "Put here the product name"
+    public selectedIndex: number = -1;
     constructor() {
         this.title = "Store Application"
         this.center = ""
@@ -40,5 +42,17 @@ export class HeaderComponent {
     togglePanel() {
         this.showElement = !this.showElement;
         // this.toggleText = this.showElement ? "Hide" : "Show"
+    }
+    addProduct(newProduct) {
+        this.products.push(newProduct)
+    }
+    itemNameChanged() {
+        console.log("item changed")
+    }
+    removeItem(indexToRemove: number) {
+        this.products.splice(indexToRemove, 1)
+    }
+    selectItem(selectedIndex: number) {
+        this.selectedIndex = selectedIndex
     }
 }
