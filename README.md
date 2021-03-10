@@ -34,3 +34,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
  - add the product to the array
 
  
+ ### Homework
+ - each product have rating
+ - add component which represents rating with starts icons
+ - create new component which creating a new product
+ - add an option to import the image from the web
+ - try to create a table view
+ 
