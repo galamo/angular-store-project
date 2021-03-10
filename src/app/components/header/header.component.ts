@@ -16,10 +16,14 @@ export class HeaderComponent {
     public center: string
     public color: string = "blue"
     public products = ["Milk", "Eggs", "Bread", "Coke", "Water"];
-    public showElement: boolean = false;
+    public showElement: boolean = true;
+    // public toggleText: string = "Show"
+    public colorTwoWay: string = "black"
+    public rangeValue: number = 10;
     public colors: Array<IColorTheme> = [{ label: "unicorn", value: "pink" },
     { label: "purple&indigo", value: "purple" },
     { label: "default", value: "blue" }]
+    public colorInputValue: string = "red"
     constructor() {
         this.title = "Store Application"
         this.center = ""
@@ -33,7 +37,8 @@ export class HeaderComponent {
     changeColor(color: string) {
         this.color = color
     }
-    showPanel() {
+    togglePanel() {
         this.showElement = !this.showElement;
+        // this.toggleText = this.showElement ? "Hide" : "Show"
     }
 }
