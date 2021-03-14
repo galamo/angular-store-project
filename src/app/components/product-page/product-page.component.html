@@ -1,4 +1,5 @@
 <div>
+    <app-add-meal (addNewMealEvent)="addNewProduct($event)"></app-add-meal>
     <app-product (deleteProductEvent)="deleteProductFromStore($event)" *ngFor="let product of productStore"
         [product]="product"></app-product>
 </div>

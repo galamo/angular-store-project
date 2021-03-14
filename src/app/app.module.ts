@@ -8,6 +8,8 @@ import { ProductPageComponent } from './components/product-page/product-page.com
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { RatingComponent } from './components/rating/rating.component';
+import { AddMealComponent } from './components/add-meal/add-meal.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { MatButtonModule } from '@angular/material/button';
     HeaderComponent,
     ProductComponent,
     ProductPageComponent,
+    RatingComponent,
+    AddMealComponent,
   ], // components / directives/ pipes and all module related
   imports: [
     BrowserModule,

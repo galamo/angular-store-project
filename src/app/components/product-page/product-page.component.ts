@@ -14,13 +14,12 @@ export class ProductPageComponent implements OnInit {
   }
 
   deleteProductFromStore(title: string) {
-    console.log("delete in parent")
     const index = this.productStore.findIndex(item => item.title === title)
     this.productStore.splice(index, 1)
   }
-
-
-
+  addNewProduct(product) {
+    this.productStore.push(product)
+  }
   ngOnInit(): void {
   }
 
