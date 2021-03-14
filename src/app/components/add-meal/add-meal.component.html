@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row mt-5 mb-5">
-        <form [formGroup]="mealForm" class="example-form">
+        <form [formGroup]="mealForm" novalidate class="example-form">
             <mat-form-field class="example-full-width">
                 <mat-label style="color:#ca3b74">Meal Name</mat-label>
                 <input matInput formControlName="mealName">
@@ -17,8 +17,8 @@
                 <mat-label style="color:#ca3b74">Description</mat-label>
                 <input matInput formControlName="mealDescription">
             </mat-form-field>
-            <button (click)="addNewMeal()" mat-button color="primary">Add Meal</button>
-            <button (click)="resetMeal()" mat-button color="primary">reset</button>
+            <button type="button" (click)="addNewMeal()" mat-button color="primary">Add Meal</button>
+            <button type="button" (click)="resetMeal()" mat-button color="primary">reset</button>
         </form>
     </div>
 </div>
