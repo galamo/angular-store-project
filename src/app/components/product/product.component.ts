@@ -9,8 +9,10 @@ export class ProductComponent implements OnInit {
   @Input() product: any
   @Output() deleteProductEvent = new EventEmitter<string>()
   public basePath: string
+  public imagePath: string
   constructor() {
-    this.basePath = "../../../assets/"
+    this.basePath = "../../../assets/";
+    this.imagePath = "";
   }
 
   deleteProduct(title: string) {
@@ -19,7 +21,7 @@ export class ProductComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    this.imagePath = this.product?.image || this.basePath + this.product?.filename
   }
 
 }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from "@angular/forms"
+import { FormsModule, ReactiveFormsModule } from "@angular/forms"
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProductComponent } from './components/product/product.component';
@@ -8,6 +8,7 @@ import { ProductPageComponent } from './components/product-page/product-page.com
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 import { RatingComponent } from './components/rating/rating.component';
 import { AddMealComponent } from './components/add-meal/add-meal.component';
 
@@ -25,7 +26,9 @@ import { AddMealComponent } from './components/add-meal/add-meal.component';
     FormsModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatButtonModule // other modules we want to use
+    MatButtonModule,
+    MatInputModule,
+    ReactiveFormsModule
   ],
   providers: [], // services 
   bootstrap: [AppComponent] //root component

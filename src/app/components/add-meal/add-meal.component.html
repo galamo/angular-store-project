@@ -1,7 +1,24 @@
-<div>
-    <input [(ngModel)]="newProductTitle" />
-    <!-- <input [(ngModel)]="newImage" />
-    <input [(ngModel)]="newRating" />
-    <input [(ngModel)]="newDescription" /> -->
-    <button (click)="addNewProduct()"> add Meal</button>
+<div class="container">
+    <div class="row mt-5 mb-5">
+        <form [formGroup]="mealForm" class="example-form">
+            <mat-form-field class="example-full-width">
+                <mat-label style="color:#ca3b74">Meal Name</mat-label>
+                <input matInput formControlName="mealName">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label style="color:#ca3b74">Image</mat-label>
+                <input matInput formControlName="mealImage">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label style="color:#ca3b74">Rating</mat-label>
+                <input matInput type="number" formControlName="mealRating">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label style="color:#ca3b74">Description</mat-label>
+                <input matInput formControlName="mealDescription">
+            </mat-form-field>
+            <button (click)="addNewMeal()" mat-button color="primary">Add Meal</button>
+            <button (click)="resetMeal()" mat-button color="primary">reset</button>
+        </form>
+    </div>
 </div>
