@@ -69,4 +69,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - Fix the issues if there is ( commit & push)
 - click on merge pull request in the UI 
 - now your code is on Master branch
+- move to master and run `git pull`
 
