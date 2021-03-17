@@ -49,3 +49,24 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
  
 ### Homework 17-03-2021
 - Create custom pipe
+
+
+
+## Git
+### Create New Branch
+
+- choose a git repository 
+- run the following command to create a new branch and move into `git checkout -b <BranchName>`
+- add new code to your branch
+- `git add .`
+- `git commit -m "Message"`
+- `git push origin head` //head means the current branch
+- Branch is up on Github service
+- Go to your repo in Github service for example: `https://github.com/galamo/angular-store-project/tree/BranchName`
+- Select your branch & Create pull request
+- Share the pull request with your reviewer 
+- Read the comments of the reviewer
+- Fix the issues if there is ( commit & push)
+- click on merge pull request in the UI 
+- now your code is on Master branch
+
