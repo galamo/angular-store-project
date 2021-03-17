@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormControl, Validators, AbstractControl, ValidatorFn } from "@angular/forms"
-
+import { ProductsService } from "../../services/products/products.service"
 interface IMeal {
   rating: number,
   image?: string,
@@ -17,8 +17,10 @@ export class AddMealComponent implements OnInit {
   @Output() addNewMealEvent = new EventEmitter<IMeal>()
   public mealForm: any
   public mealNameErrors: Array<string>
-  constructor(private formBuilder: FormBuilder) {
+  public totalProducts: number;
+  constructor(private formBuilder: FormBuilder, public productService: ProductsService) {
     this.mealNameErrors = [];
+    this.totalProducts = this.productService.getProductStore().length
     this.mealForm = this.formBuilder.group({
       mealName: new FormControl("", [Validators.required, Validators.maxLength(15), Validators.minLength(5)]),
       mealImage: new FormControl("", [Validators.required, forbiddenNameValidator()]),
@@ -48,8 +50,9 @@ export class AddMealComponent implements OnInit {
     this.addNewMealEvent.emit(newMeal)
   }
   collectErrors() {
-    const errors = Object.keys(this.mealForm.get("mealName").errors);
-    this.mealNameErrors = errors;
+    const errors = this.mealForm.get("mealName").errors;
+    if (!errors) return;
+    this.mealNameErrors = Object.keys(this.mealForm.get("mealName").errors);
   }
   resetMeal() {
     this.mealForm.reset()

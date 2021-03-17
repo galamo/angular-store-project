@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { UserService } from "../../services/user.service"
 
 @Component({
   selector: 'app-product',
@@ -10,9 +11,12 @@ export class ProductComponent implements OnInit {
   @Output() deleteProductEvent = new EventEmitter<string>()
   public basePath: string
   public imagePath: string
-  constructor() {
+  public arrayOfComments: Array<string> = []
+  public user: string;
+  constructor(public userServiceName: UserService) {
     this.basePath = "../../../assets/";
     this.imagePath = "";
+   
   }
 
   deleteProduct(title: string) {
@@ -24,4 +28,9 @@ export class ProductComponent implements OnInit {
     this.imagePath = this.product?.image || this.basePath + this.product?.filename
   }
 
+
+  addComment(comment: string) {
+    this.userServiceName.setUser(comment)
+    this.arrayOfComments.push(comment)
+  }
 }

@@ -20,4 +20,7 @@
 
         </mat-card-actions>
     </mat-card>
+    {{ userServiceName.getUser() }}
+    <app-comment-list [comments]="arrayOfComments"></app-comment-list>
+    <app-add-comment (sendComment)="addComment($event)"></app-add-comment>
 </div>

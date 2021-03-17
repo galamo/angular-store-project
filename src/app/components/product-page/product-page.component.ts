@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import *  as data from '../../products.json';
+import { UserService } from "../../services/user.service"
+import { ProductsService } from "../../services/products/products.service"
+
 
 
 @Component({
@@ -9,8 +11,10 @@ import *  as data from '../../products.json';
 })
 export class ProductPageComponent implements OnInit {
   public productStore: Array<any>
-  constructor() {
-    this.productStore = (data as any).default;
+  public user: string;
+  constructor(private userService: UserService, private productsService: ProductsService) {
+    this.productStore = this.productsService.getProductStore()
+    this.user = this.userService.getUser()
   }
 
   deleteProductFromStore(title: string) {

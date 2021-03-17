@@ -9,8 +9,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { MatChipsModule } from '@angular/material/chips';
+
 import { RatingComponent } from './components/rating/rating.component';
 import { AddMealComponent } from './components/add-meal/add-meal.component';
+import { AddCommentComponent } from './components/add-comment/add-comment.component';
+import { CommentListComponent } from './components/comment-list/comment-list.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +24,8 @@ import { AddMealComponent } from './components/add-meal/add-meal.component';
     ProductPageComponent,
     RatingComponent,
     AddMealComponent,
+    AddCommentComponent,
+    CommentListComponent,
   ], // components / directives/ pipes and all module related
   imports: [
     BrowserModule,
@@ -28,7 +34,8 @@ import { AddMealComponent } from './components/add-meal/add-meal.component';
     MatCardModule,
     MatButtonModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatChipsModule
   ],
   providers: [], // services 
   bootstrap: [AppComponent] //root component
