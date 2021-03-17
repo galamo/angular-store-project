@@ -17,7 +17,7 @@ export class HeaderComponent {
     public color: string = "blue"
     public products = ["Milk", "Eggs", "Bread", "Coke", "Water"];
     public showElement: boolean = true;
-    // public toggleText: string = "Show"
+    public toggleText: string = "Show" // new parameter
     public colorTwoWay: string = "black"
     public rangeValue: number = 10;
     public colors: Array<IColorTheme> = [{ label: "unicorn", value: "pink" },

@@ -47,3 +47,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
  - create new component that add a comment on each meal
  - each meal will present his own comments
  
+### Homework 17-03-2021
+- Create custom pipe
