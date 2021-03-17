@@ -30,15 +30,7 @@ export class AddMealComponent implements OnInit {
   }
   addNewMeal() {
     this.mealNameErrors = []
-    //tests
-    // console.log("mealName", this.mealForm.get("mealName"))
-    // console.log("mealImage", this.mealForm.get("mealImage").status)
-    // console.log("mealRating", this.mealForm.get("mealRating").status)
-    // console.log("mealDescription", this.mealForm.get("mealDescription").status)
-    console.log("form", this.mealForm.controls)
-
     this.collectErrors()
-
     const formInvalid = this.mealForm.status === "INVALID"
     if (formInvalid) return;
     const newMeal: IMeal = {

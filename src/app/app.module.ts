@@ -10,7 +10,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatChipsModule } from '@angular/material/chips';
-
+import { MatIconModule } from '@angular/material/icon';
 import { RatingComponent } from './components/rating/rating.component';
 import { AddMealComponent } from './components/add-meal/add-meal.component';
 import { AddCommentComponent } from './components/add-comment/add-comment.component';
@@ -35,7 +35,8 @@ import { CommentListComponent } from './components/comment-list/comment-list.com
     MatButtonModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatChipsModule
+    MatChipsModule,
+    MatIconModule
   ],
   providers: [], // services 
   bootstrap: [AppComponent] //root component

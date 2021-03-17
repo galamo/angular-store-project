@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { UserService } from "../../services/user.service"
-
+import { ProductsService } from "../../services/products/products.service"
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -13,15 +13,14 @@ export class ProductComponent implements OnInit {
   public imagePath: string
   public arrayOfComments: Array<string> = []
   public user: string;
-  constructor(public userServiceName: UserService) {
+  constructor(public userServiceName: UserService, private productsService: ProductsService) {
     this.basePath = "../../../assets/";
     this.imagePath = "";
-   
+
   }
 
   deleteProduct(title: string) {
-    console.log("delete in child")
-    this.deleteProductEvent.emit(title)
+    this.productsService.deleteProduct(this.product.title)
   }
 
   ngOnInit(): void {
@@ -33,4 +32,6 @@ export class ProductComponent implements OnInit {
     this.userServiceName.setUser(comment)
     this.arrayOfComments.push(comment)
   }
+
+
 }

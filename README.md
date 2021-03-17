@@ -48,7 +48,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
  - each meal will present his own comments
  
 ### Homework 17-03-2021
-- Create custom pipe
+- Create Comments service.
+- Service should hold all the comments of each meal
+- getComments(mealNameOrId)
+- addComment(mealNameOrId,comment)
+- deleteComment(mealNameOrId,commentId)
 
 
 

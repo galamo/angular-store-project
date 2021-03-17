@@ -22,7 +22,7 @@ export class ProductPageComponent implements OnInit {
     this.productStore.splice(index, 1)
   }
   addNewProduct(product) {
-    this.productStore.push(product)
+    this.productsService.productStore.push(product)
   }
   ngOnInit(): void {
   }

@@ -15,4 +15,10 @@ export class ProductsService {
   getProductStore() {
     return this.productStore;
   }
+
+  deleteProduct(productId: string) {
+    const index = this.productStore.findIndex(p => p.title === productId)
+    if (index === -1) return;
+    this.productStore.splice(index, 1)
+  }
 }
