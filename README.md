@@ -75,3 +75,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - now your code is on Master branch
 - move to master and run `git pull`
 
+
+### Homework 21-03-2021
+- Create custom pipe which present the requested currency - USD/EUR and multiple the price.
+- Create New application and present your bank accounts from the server 
