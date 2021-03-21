@@ -12,12 +12,13 @@ export class ProductComponent implements OnInit, OnChanges {
   @Output() deleteProductEvent = new EventEmitter<string>()
   public basePath: string
   public imagePath: string
-  public arrayOfComments: Array<string> = []
+  public arrayOfComments: Array<any> = []
   public user: string;
   constructor(public userServiceName: UserService, private productsService: ProductsService,
     public commentsService: CommentsService) {
     this.basePath = "../../../assets/";
     this.imagePath = "";
+    this.arrayOfComments = [];
 
   }
 
@@ -27,14 +28,13 @@ export class ProductComponent implements OnInit, OnChanges {
 
   ngOnInit(): void {
     this.imagePath = this.product?.image || this.basePath + this.product?.filename
-    // this.arrayOfComments = this.commentsService.getComments(this.product.title).map(c => c.comment)
+    this.arrayOfComments = this.commentsService.getComments(this.product.title)
   }
 
 
   addComment(comment: string) {
     this.userServiceName.setUser(comment)
     this.commentsService.addComment(this.product.title, comment)
-    // this.arrayOfComments.push(comment)
   }
 
   ngOnChanges() {

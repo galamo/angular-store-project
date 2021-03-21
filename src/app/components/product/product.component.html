@@ -20,7 +20,7 @@
 
         </mat-card-actions>
     </mat-card>
-    <app-comment-list [comments]="arrayOfComments"></app-comment-list>
+    <app-comment-list [comments]="commentsService.getComments(product.title)"></app-comment-list>
 
     <app-add-comment (sendComment)="addComment($event)"></app-add-comment>
 </div>
