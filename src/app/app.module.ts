@@ -16,6 +16,8 @@ import { AddMealComponent } from './components/add-meal/add-meal.component';
 import { AddCommentComponent } from './components/add-comment/add-comment.component';
 import { CommentListComponent } from './components/comment-list/comment-list.component';
 import { DiscountPipe } from './pipes/discount.pipe';
+import { HttpClientModule } from '@angular/common/http';
+import { CountriesPageComponent } from './components/countries-page/countries-page.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { DiscountPipe } from './pipes/discount.pipe';
     AddCommentComponent,
     CommentListComponent,
     DiscountPipe,
+    CountriesPageComponent,
   ], // components / directives/ pipes and all module related
   imports: [
     BrowserModule,
@@ -38,7 +41,8 @@ import { DiscountPipe } from './pipes/discount.pipe';
     MatInputModule,
     ReactiveFormsModule,
     MatChipsModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
   ],
   providers: [], // services 
   bootstrap: [AppComponent] //root component

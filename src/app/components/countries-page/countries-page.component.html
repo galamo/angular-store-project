@@ -1,0 +1,9 @@
+<div>
+    <h1>
+        Countries Page
+    </h1>
+    <div *ngFor="let c of countries">
+        <h3> {{ c.name }} </h3>
+        <img [src]="c.flag" />
+    </div>
+</div>
