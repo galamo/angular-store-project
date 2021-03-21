@@ -15,6 +15,7 @@ import { RatingComponent } from './components/rating/rating.component';
 import { AddMealComponent } from './components/add-meal/add-meal.component';
 import { AddCommentComponent } from './components/add-comment/add-comment.component';
 import { CommentListComponent } from './components/comment-list/comment-list.component';
+import { DiscountPipe } from './pipes/discount.pipe';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { CommentListComponent } from './components/comment-list/comment-list.com
     AddMealComponent,
     AddCommentComponent,
     CommentListComponent,
+    DiscountPipe,
   ], // components / directives/ pipes and all module related
   imports: [
     BrowserModule,

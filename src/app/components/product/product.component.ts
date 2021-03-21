@@ -24,6 +24,7 @@ export class ProductComponent implements OnInit, OnChanges {
 
   deleteProduct(title: string) {
     this.productsService.deleteProduct(this.product.title)
+    this.commentsService.deleteComments(this.product.title)
   }
 
   ngOnInit(): void {

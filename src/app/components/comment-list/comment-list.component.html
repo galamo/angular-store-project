@@ -1,6 +1,9 @@
 <mat-form-field>
     <mat-chip-list #chipList>
-        <mat-chip style="height: 50px;" *ngFor="let c of comments">{{ c.comment }} {{ c.createdAt }} {{ c.mealName }}
+        <mat-chip style="height: 50px;" *ngFor="let c of comments">{{ c.comment }}
+            {{ c.createdAt | date:'dd-MMM' | uppercase }}
+            {{ c.createdAt | date:'dd-MM/YYYY' }}
+            {{ c.mealName }}
             <button (click)="deleteComment(c.commentId)">x</button>
         </mat-chip>
     </mat-chip-list>

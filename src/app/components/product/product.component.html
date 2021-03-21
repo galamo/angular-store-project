@@ -2,9 +2,10 @@
     <mat-card class="card-product">
         <mat-card-header>
             <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>{{ product.title }}</mat-card-title>
-            <mat-card-subtitle>{{ product.type }}</mat-card-subtitle>
-            <mat-card-subtitle>{{ product.price }}</mat-card-subtitle>
+            <mat-card-title>{{ product.title | uppercase }}</mat-card-title>
+            <mat-card-subtitle>{{ product.type | lowercase}}</mat-card-subtitle>
+            <mat-card-subtitle><s>{{ product.price }}</s></mat-card-subtitle>
+            <mat-card-subtitle>{{ product.price | discount:0.5 }}</mat-card-subtitle>
         </mat-card-header>
         <img mat-card-image [src]="imagePath" alt="No Image">
         <mat-card-content>

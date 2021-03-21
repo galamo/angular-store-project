@@ -44,6 +44,10 @@ export class CommentsService {
     this.comments.splice(indexToDelete, 1)
   }
 
+  deleteComments(mealName: string) {
+    this.comments = this.comments.filter(comment => comment.mealName !== mealName)
+  }
+
 
 }
 
